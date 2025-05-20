@@ -20,7 +20,7 @@ def main(args):
     # Autoencoder parameters
     latent_dim = args.latent_dim 
     AE_activation = args.AE_activation
-    layer_vec_AE = [1024,500,200,100,latent_dim]
+    layer_vec_AE = [1024,200,100,latent_dim]
     
     #-----------------------------------------------------------------------------
     # pGFINN parameters
