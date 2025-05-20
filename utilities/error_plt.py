@@ -29,17 +29,27 @@ def max_err_heatmap(max_err, p1_test, p2_test, data_path, idx_list=[], idx_param
 
     fontsize = 14
 
+    # Create annotation strings based on value thresholds
+    annot_data = np.empty_like(max_err, dtype=object)
+    for i in range(max_err.shape[0]):
+        for j in range(max_err.shape[1]):
+            val = max_err[i, j] * scale
+            if val >= 10:
+                annot_data[i, j] = f"{round(val)}"
+            else:
+                annot_data[i, j] = f"{val:.1f}"
+                
     ax = fig.add_subplot(111)
     cbar_ax = fig.add_axes([0.99, 0.19, 0.02, 0.7])
 
     # vmax = max_err.max() * scale
     if vmin == None: vmin = max_err.min()
     if vmax == None: vmax = max_err.max()
-    heatmap = sns.heatmap(max_err * scale, ax=ax, square=True,
-                          xticklabels=p2_test, yticklabels=p1_test,
-                          annot=True, annot_kws={'size': fontsize}, fmt=fmt1,
-                          cbar_ax=cbar_ax, cbar=True, cmap='vlag', robust=True, 
-                          vmin=vmin, vmax=vmax)
+    heatmap = sns.heatmap(max_err * scale, ax=ax, square=True, 
+                        xticklabels=p2_test, yticklabels=p1_test, 
+                        annot=annot_data, annot_kws={'size': fontsize}, fmt='', 
+                        cbar_ax=cbar_ax, cbar=True, cmap='vlag', 
+                        robust=True, vmin=vmin, vmax=vmax)
 
     # Define a formatter function to add the percentage sign
     def percentage_formatter(x, pos):
