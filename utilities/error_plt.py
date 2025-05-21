@@ -3,6 +3,7 @@ import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 from copy import deepcopy
+import numpy as np
 plt.rcParams["text.usetex"] = False
 
 def max_err_heatmap(max_err, p1_test, p2_test, data_path, idx_list=[], idx_param=[],
