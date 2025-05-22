@@ -58,7 +58,6 @@ def main(args):
     
     #--------------------------------------------------------------------------------
     # Load data
-    # dataset = load_dataset('Vlasov1D1V','data',device,dtype)
     dataset = GroundTruthDataset('Vlasov1D1V',device,dtype)
     
     #--------------------------------------------------------------------------------
