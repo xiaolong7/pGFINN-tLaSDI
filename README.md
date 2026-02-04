@@ -92,3 +92,6 @@ python test_model_vlasov.py
 |`--weight_decay_AE` | `float`, weight decay rate for AE | Default: `0`|
 |`--update_epochs` | `int`, greedy sampling frequency | Default: `1000000`| 
 |`--n_train_max` | `int`, max number of training samples for adaptive sampling | Default: `10`| 
+
+## Citation
+[He, X., Shin, Y., Gruber, A., Jung, S., Lee, K. and Choi, Y., 2025. Thermodynamically Consistent Latent Dynamics Identification for Parametric Systems. arXiv preprint arXiv:2506.08475.](https://arxiv.org/abs/2506.08475)
