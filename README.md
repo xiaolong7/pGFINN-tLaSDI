@@ -94,4 +94,4 @@ python test_model_vlasov.py
 |`--n_train_max` | `int`, max number of training samples for adaptive sampling | Default: `10`| 
 
 ## Citation
-[He, X., Shin, Y., Gruber, A., Jung, S., Lee, K. and Choi, Y., 2025. Thermodynamically Consistent Latent Dynamics Identification for Parametric Systems. arXiv preprint arXiv:2506.08475.](https://arxiv.org/abs/2506.08475)
+[He, X., Shin, Y., Gruber, A., Jung, S., Lee, K. and Choi, Y., 2026. Thermodynamically Consistent Latent Dynamics Identification for Parametric Systems. Transactions on Machine Learning Research.](https://arxiv.org/abs/2506.08475)
